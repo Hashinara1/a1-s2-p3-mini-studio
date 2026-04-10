@@ -1,0 +1,104 @@
+{
+  "animations": {
+    "Fall": {
+      "frame_time": 0.11999999731779099,
+      "frames": [
+        25
+      ],
+      "loop": false
+    },
+    "Hit": {
+      "frame_time": 0.20000000298023224,
+      "frames": [
+        11,
+        12,
+        13
+      ],
+      "loop": false
+    },
+    "Idle": {
+      "frame_time": 0.20000000298023224,
+      "frames": [
+        45,
+        0,
+        44
+      ],
+      "loop": true
+    },
+    "Jump": {
+      "frame_time": 0.11999999731779099,
+      "frames": [
+        22,
+        23,
+        24
+      ],
+      "loop": false
+    },
+    "Run": {
+      "frame_time": 0.11999999731779099,
+      "frames": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loop": true
+    },
+    "Stun": {
+      "frame_time": 0.3,
+      "frames": [
+        37,
+        37,
+        37
+
+      ],
+      "loop": false
+    },
+    "Dash": {
+      "frame_time": 0.12,
+      "frames": [
+        37,
+        37,
+        37,
+        37,
+        37,
+        37
+
+      ],
+      "loop": false
+    },
+    "DAttack": {
+      "frame_time": 0.12,
+      "frames": [
+        37,
+        37,
+        37,
+        37,
+        37,
+        37
+
+      ],
+      "loop": false
+    },
+    "CACAttack": {
+      "frame_time": 0.12,
+      "frames": [
+        37,
+        37,
+        37,
+        37,
+        37,
+        37
+
+      ],
+      "loop": false
+    }
+  },
+    "frame_size": {
+        "height": 1180,
+        "width": 700
+    },
+    "texture": "C:\\Users\\Eliott\\source\\repos\\MiniStudio\\res\\Player\\AssetPlayer.png"
+}

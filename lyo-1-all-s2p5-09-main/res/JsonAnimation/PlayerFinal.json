@@ -1,0 +1,94 @@
+{
+    "animations": {
+        "CACAttack": {
+            "frame_time": 0.11999999731779099,
+            "frames": [
+                63,
+                64,
+                65,
+                66,
+                67,
+                68
+            ],
+            "loop": false
+        },
+        "Dash": {
+            "frame_time": 0.11999999731779099,
+            "frames": [
+                48,
+                49,
+                50,
+                51,
+                52
+            ],
+            "loop": false
+        },
+        "DAttack": {
+            "frame_time": 0.11999999731779099,
+            "frames": [
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78
+            ],
+            "loop": false
+        },
+        "Fall": {
+            "frame_time": 0.11999999731779099,
+            "frames": [
+                22
+            ],
+            "loop": true
+        },
+        "Hit": {
+            "frame_time": 0.11999999731779099,
+            "frames": [
+                9,
+                10,
+                11
+            ],
+            "loop": false
+        },
+        "Idle": {
+            "frame_time": 0.11999999731779099,
+            "frames": [
+                36,
+                37,
+                38
+            ],
+            "loop": true
+        },
+        "Jump": {
+            "frame_time": 0.11999999731779099,
+            "frames": [
+                19,
+                20,
+                21
+            ],
+            "loop": false
+        },
+        "Run": {
+            "frame_time": 0.11999999731779099,
+            "frames": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+            ],
+            "loop": true
+        }
+        
+    },
+    "frame_size": {
+        "height": 515,
+        "width": 398
+    },
+    "texture": "C:\\Users\\ebaudoin\\Downloads\\playersrpiteSheet.png"
+}

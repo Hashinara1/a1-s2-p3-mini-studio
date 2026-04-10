@@ -1,0 +1,22 @@
+{
+    "animations": {
+        "Hit": {
+            "frame_time": 0.12,
+            "frames": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+            ],
+            "loop": true
+        }
+    },
+    "frame_size": {
+        "height": 51,
+        "width": 50
+    },
+    "texture": "C:\\Users\\Eliott\\source\\repos\\MiniStudio\\res\\Monsters\\foudre-de-SOS.png"
+}

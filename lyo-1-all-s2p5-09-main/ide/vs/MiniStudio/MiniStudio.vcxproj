@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+    <ItemGroup Label="ProjectConfigurations">
+        <ProjectConfiguration Include="Debug|x64">
+            <Configuration>Debug</Configuration>
+            <Platform>x64</Platform>
+        </ProjectConfiguration>
+        <ProjectConfiguration Include="Release|x64">
+            <Configuration>Release</Configuration>
+            <Platform>x64</Platform>
+        </ProjectConfiguration>
+    </ItemGroup>
+    <PropertyGroup Label="Globals">
+        <VCProjectVersion>17.0</VCProjectVersion>
+        <Keyword>Win32Proj</Keyword>
+        <ProjectGuid>{271028F0-3FBF-42E9-8949-CC7F35ECB642}</ProjectGuid>
+        <RootNamespace>MiniStudio</RootNamespace>
+        <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    </PropertyGroup>
+    <PropertyGroup Label="Vcpkg">
+        <VcpkgEnable>false</VcpkgEnable>
+        <VcpkgEnableManifest>false</VcpkgEnableManifest>
+        <VcpkgManifestRoot>..\..\..\config\</VcpkgManifestRoot>
+        <VcpkgInstalledDir>.\vcpkg_installed\$(VcpkgTriplet)\</VcpkgInstalledDir>
+    </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props"/>
+    <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;" Label="Configuration">
+        <ConfigurationType>Application</ConfigurationType>
+        <UseDebugLibraries>true</UseDebugLibraries>
+        <PlatformToolset>v143</PlatformToolset>
+        <CharacterSet>Unicode</CharacterSet>
+    </PropertyGroup>
+    <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;" Label="Vcpkg">
+        <VcpkgConfiguration>Debug</VcpkgConfiguration>
+    </PropertyGroup>
+    <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;" Label="Configuration">
+        <ConfigurationType>Application</ConfigurationType>
+        <UseDebugLibraries>false</UseDebugLibraries>
+        <PlatformToolset>v143</PlatformToolset>
+        <CharacterSet>Unicode</CharacterSet>
+    </PropertyGroup>
+    <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;" Label="Vcpkg">
+        <VcpkgConfiguration>Release</VcpkgConfiguration>
+    </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props"/>
+    <ImportGroup Label="ExtensionSettings"/>
+    <ImportGroup Label="Shared"/>
+    <ImportGroup Label="PropertySheets" Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">
+        <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props&apos;)" Label="LocalAppDataPlatform"/>
+    </ImportGroup>
+    <ImportGroup Label="PropertySheets" Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">
+        <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props&apos;)" Label="LocalAppDataPlatform"/>
+    </ImportGroup>
+    <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">
+        <OutDir>$(ProjectDir)Build\$(Configuration)\</OutDir>
+        <IntDir>$(ProjectDir)Build\$(Configuration)\intermediate\</IntDir>
+    </PropertyGroup>
+    <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">
+        <OutDir>$(ProjectDir)Build\$(Configuration)\</OutDir>
+        <IntDir>$(ProjectDir)Build\$(Configuration)\intermediate\</IntDir>
+    </PropertyGroup>
+    <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">
+        <ClCompile>
+            <WarningLevel>Level3</WarningLevel>
+            <SDLCheck>true</SDLCheck>
+            <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);SFML_STATIC</PreprocessorDefinitions>
+            <ConformanceMode>true</ConformanceMode>
+            <PrecompiledHeader>NotUsing</PrecompiledHeader>
+            <LanguageStandard>stdcpp20</LanguageStandard>
+            <AdditionalIncludeDirectories>$(SolutionDir)../../SFML-2.5.1/include; $(SolutionDir)../../src/LightEngine</AdditionalIncludeDirectories>
+        </ClCompile>
+        <Link>
+            <SubSystem>Console</SubSystem>
+            <GenerateDebugInformation>true</GenerateDebugInformation>
+            <AdditionalLibraryDirectories>$(SolutionDir)../../SFML-2.5.1/lib; $(SolutionDir)../../ide/vs/LightEngine/Build/Debug</AdditionalLibraryDirectories>
+            <AdditionalDependencies>LightEngine.lib;sfml-graphics-s-d.lib;sfml-window-s-d.lib;sfml-audio-s-d.lib;sfml-system-s-d.lib;opengl32.lib;glu32.lib;gdi32.lib;winmm.lib;dwmapi.lib;freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
+        </Link>
+    </ItemDefinitionGroup>
+    <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">
+        <ClCompile>
+            <WarningLevel>Level3</WarningLevel>
+            <SDLCheck>true</SDLCheck>
+            <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+            <ConformanceMode>true</ConformanceMode>
+            <PrecompiledHeader>Use</PrecompiledHeader>
+            <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+            <LanguageStandard>stdcpp20</LanguageStandard>
+        </ClCompile>
+        <Link>
+            <SubSystem>Console</SubSystem>
+            <GenerateDebugInformation>false</GenerateDebugInformation>
+            <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+        </Link>
+    </ItemDefinitionGroup>
+    <ItemGroup>
+        <ClCompile Include="..\..\..\src\MiniStudio\AnimationScene.cpp"/>
+        <ClCompile Include="..\..\..\src\MiniStudio\AssetsScene.cpp"/>
+        <ClCompile Include="..\..\..\src\MiniStudio\AtkEntity.cpp"/>
+        <ClCompile Include="..\..\..\src\MiniStudio\BoutonAction.cpp"/>
+        <ClCompile Include="..\..\..\src\MiniStudio\Enemies.cpp"/>
+        <ClCompile Include="..\..\..\src\MiniStudio\EnemiesActions.cpp"/>
+        <ClCompile Include="..\..\..\src\MiniStudio\EnemiesConditions.cpp"/>
+        <ClCompile Include="..\..\..\src\MiniStudio\FirstScene.cpp"/>
+        <ClCompile Include="..\..\..\src\MiniStudio\Item.cpp"/>
+        <ClCompile Include="..\..\..\src\MiniStudio\Lizard.cpp"/>
+        <ClCompile Include="..\..\..\src\MiniStudio\LizardActions.cpp"/>
+        <ClCompile Include="..\..\..\src\MiniStudio\LizardConditions.cpp"/>
+        <ClCompile Include="..\..\..\src\MiniStudio\main.cpp"/>
+        <ClCompile Include="..\..\..\src\MiniStudio\Merchant.cpp"/>
+        <ClCompile Include="..\..\..\src\MiniStudio\MusicEnigme.cpp"/>
+        <ClCompile Include="..\..\..\src\MiniStudio\Note1.cpp"/>
+        <ClCompile Include="..\..\..\src\MiniStudio\Note2.cpp"/>
+        <ClCompile Include="..\..\..\src\MiniStudio\Note3.cpp"/>
+        <ClCompile Include="..\..\..\src\MiniStudio\Note4.cpp"/>
+        <ClCompile Include="..\..\..\src\MiniStudio\Notes.cpp"/>
+        <ClCompile Include="..\..\..\src\MiniStudio\PauseUI.cpp"/>
+        <ClCompile Include="..\..\..\src\MiniStudio\Player.cpp"/>
+        <ClCompile Include="..\..\..\src\MiniStudio\PlayerActions.cpp"/>
+        <ClCompile Include="..\..\..\src\MiniStudio\PlayerConditions.cpp"/>
+        <ClCompile Include="..\..\..\src\MiniStudio\POPEntity.cpp"/>
+        <ClCompile Include="..\..\..\src\MiniStudio\ShadowOfStorm.cpp"/>
+        <ClCompile Include="..\..\..\src\MiniStudio\ShadowOfStormAction.cpp"/>
+        <ClCompile Include="..\..\..\src\MiniStudio\ShadowOfStormCondition.cpp"/>
+        <ClCompile Include="..\..\..\src\MiniStudio\Stele.cpp"/>
+    </ItemGroup>
+    <ItemGroup>
+        <ClInclude Include="..\..\..\src\MiniStudio\AliveEntity.h"/>
+        <ClInclude Include="..\..\..\src\MiniStudio\AnimationScene.h"/>
+        <ClInclude Include="..\..\..\src\MiniStudio\AssetsScene.h"/>
+        <ClInclude Include="..\..\..\src\MiniStudio\AtkEntity.h"/>
+        <ClInclude Include="..\..\..\src\MiniStudio\BoutonAction.h"/>
+        <ClInclude Include="..\..\..\src\MiniStudio\Define.h"/>
+        <ClInclude Include="..\..\..\src\MiniStudio\Enemies.h"/>
+        <ClInclude Include="..\..\..\src\MiniStudio\EnemiesActions.h"/>
+        <ClInclude Include="..\..\..\src\MiniStudio\EnemiesConditions.h"/>
+        <ClInclude Include="..\..\..\src\MiniStudio\FirstScene.h"/>
+        <ClInclude Include="..\..\..\src\MiniStudio\IInteractable.h"/>
+        <ClInclude Include="..\..\..\src\MiniStudio\Item.h"/>
+        <ClInclude Include="..\..\..\src\MiniStudio\Lizard.h"/>
+        <ClInclude Include="..\..\..\src\MiniStudio\LizardActions.h"/>
+        <ClInclude Include="..\..\..\src\MiniStudio\LizardConditions.h"/>
+        <ClInclude Include="..\..\..\src\MiniStudio\Merchant.h"/>
+        <ClInclude Include="..\..\..\src\MiniStudio\MusicEnigme.h"/>
+        <ClInclude Include="..\..\..\src\MiniStudio\Note1.h"/>
+        <ClInclude Include="..\..\..\src\MiniStudio\Note2.h"/>
+        <ClInclude Include="..\..\..\src\MiniStudio\Note3.h"/>
+        <ClInclude Include="..\..\..\src\MiniStudio\Note4.h"/>
+        <ClInclude Include="..\..\..\src\MiniStudio\Notes.h"/>
+        <ClInclude Include="..\..\..\src\MiniStudio\PauseUI.h"/>
+        <ClInclude Include="..\..\..\src\MiniStudio\Player.h"/>
+        <ClInclude Include="..\..\..\src\MiniStudio\PlayerActions.h"/>
+        <ClInclude Include="..\..\..\src\MiniStudio\PlayerConditions.h"/>
+        <ClInclude Include="..\..\..\src\MiniStudio\POPEntity.h"/>
+        <ClInclude Include="..\..\..\src\MiniStudio\ShadowOfStorm.h"/>
+        <ClInclude Include="..\..\..\src\MiniStudio\ShadowOfStormAction.h"/>
+        <ClInclude Include="..\..\..\src\MiniStudio\ShadowOfStormCondition.h"/>
+        <ClInclude Include="..\..\..\src\MiniStudio\Stele.h"/>
+        <ClInclude Include="..\..\..\src\MiniStudio\Wall.h"/>
+    </ItemGroup>
+    <ItemGroup/>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets"/>
+    <ImportGroup Label="ExtensionTargets"/>
+</Project>

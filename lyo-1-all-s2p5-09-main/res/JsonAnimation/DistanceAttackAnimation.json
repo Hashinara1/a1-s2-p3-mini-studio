@@ -1,0 +1,23 @@
+{
+    "animations": {
+        "DistanceAttackAnimation": {
+            "frame_time": 0.11999999731779099,
+            "frames": [
+                57,
+                58,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+            ],
+            "loop": true
+        }
+    },
+    "frame_size": {
+        "height": 485,
+        "width": 700
+    },
+    "texture": "C:\\Users\\alexi\\Downloads\\AttaqueDistance_Perso_Principal.png"
+}

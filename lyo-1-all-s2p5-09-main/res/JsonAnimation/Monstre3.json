@@ -1,0 +1,19 @@
+{
+    "animations": {
+        "Monster_3_Attack": {
+            "frame_time": 0.11999999731779099,
+            "frames": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "loop": true
+        }
+    },
+    "frame_size": {
+        "height": 690,
+        "width": 1069
+    },
+    "texture": "C:\\Users\\strinh\\Downloads\\IMG_0207.png"
+}

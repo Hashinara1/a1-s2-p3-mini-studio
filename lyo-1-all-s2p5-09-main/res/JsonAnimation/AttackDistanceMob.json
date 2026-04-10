@@ -1,0 +1,22 @@
+{
+    "animations": {
+        "Run": {
+            "frame_time": 0.11999999731779099,
+            "frames": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+            ],
+            "loop": true
+        }
+    },
+    "frame_size": {
+        "height": 138,
+        "width": 123
+    },
+    "texture": "C:\\Users\\ebaudoin\\Documents\\GitHub\\lyo-1-all-s2p5-09\\res\\Monsters\\AttackDistanceMob.png"
+}

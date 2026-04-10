@@ -1,0 +1,20 @@
+{
+    "animations": {
+        "Attack": {
+            "frame_time": 0.11999999731779099,
+            "frames": [
+                0,
+                1,
+                2,
+                3,
+                4
+            ],
+            "loop": true
+        }
+    },
+    "frame_size": {
+        "height": 600,
+        "width": 550
+    },
+    "texture": "C:\\Users\\strinh\\Downloads\\AttackFrontalMob.png"
+}
